@@ -31,7 +31,7 @@ config/autoload/php.config.local.php
 <?php
 
 return array(
-    'PhpConfig' => array(
+    'PHPConfig' => array(
         'display_startup_errors'     => true,
         'display_errors'             => true,
         'date.timezone'              => 'Europe/Berlin',

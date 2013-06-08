@@ -18,10 +18,10 @@ class Module
         /** @var $config array */
         $config = $application->getConfig();
 
-        if (array_key_exists('PhpConfig', $config)
-            && is_array($config['PhpConfig'])
+        if (array_key_exists('PHPConfig', $config)
+            && is_array($config['PHPConfig'])
         ) {
-            foreach ($config['PhpConfig'] as $key => $value) {
+            foreach ($config['PHPConfig'] as $key => $value) {
                 ini_set($key, $value);
             }
         }
