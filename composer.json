@@ -1,0 +1,29 @@
+{
+    "name": "wormhit/PHPConfig",
+    "description": "PHPConfig is zf2 module to set php.ini values on the fly",
+    "license": "Apache-2.0",
+    "type": "library",
+    "keywords": [
+        "php",
+		"ini",
+        "configuration",
+        "zf2",
+        "zend framework 2"
+    ],
+    "homepage": "https://github.com/wormhit/PHPConfig",
+    "authors": [
+        {
+            "name": "Andrejs Stepanovs",
+            "email": "andrejsstepanovs@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": "2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
