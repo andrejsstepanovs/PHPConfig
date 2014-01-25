@@ -6,6 +6,8 @@ namespace PHPConfig;
  */
 class Module
 {
+    const CONFIG_KEY = 'PHPConfig';
+
     /**
      * @param \Zend\Mvc\MvcEvent $mvcEvent
      */
@@ -17,8 +19,8 @@ class Module
         /** @var $config array */
         $config = $application->getConfig();
 
-        if (array_key_exists('PHPConfig', $config) && is_array($config['PHPConfig'])) {
-            foreach ($config['PHPConfig'] as $key => $value) {
+        if (!empty($config[self::CONFIG_KEY])) {
+            foreach ($config[self::CONFIG_KEY] as $key => $value) {
                 ini_set($key, $value);
             }
         }
