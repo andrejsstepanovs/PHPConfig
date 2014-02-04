@@ -1,17 +1,24 @@
 <?php
 namespace PHPConfig;
 
+use \Zend\EventManager\EventInterface;
+
 /**
+ * Class Module
+ *
  * Allow to set php.ini values on the fly.
+ *
+ * @package PHPConfig
  */
 class Module
 {
+    /** configuration key */
     const CONFIG_KEY = 'PHPConfig';
 
     /**
-     * @param \Zend\Mvc\MvcEvent $mvcEvent
+     * @param \Zend\Mvc\MvcEvent|EventInterface $mvcEvent
      */
-    public function onBootstrap($mvcEvent)
+    public function onBootstrap(EventInterface $mvcEvent)
     {
         /** @var $application \Zend\Mvc\Application */
         $application = $mvcEvent->getApplication();
